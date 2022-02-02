@@ -9,6 +9,8 @@
   --step-3: clamp(2.27rem, 2.14rem + 0.66vw, 2.93rem);
   --step-4: clamp(2.72rem, 2.53rem + 0.94vw, 3.66rem);
   --step-5: clamp(3.27rem, 3rem + 1.31vw, 4.58rem);
+  --step-6: clamp(4.27rem, 4rem + 2.31vw, 5.58rem);
+ 
 }
 
 *,
@@ -18,35 +20,37 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   position: relative;
-}
-body {
   background: rgb(82, 81, 81);
 }
+
 
 .hero {
   background: rgb(82, 81, 81);
   max-height: 100vh;
+  width: 100vw;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .hero .hero-container {
-  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   transform-style: preserve-3d;
-  perspective: 1000px;
+  perspective: 100px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  
 }
 
 .hero-text {
-  position: sticky;
-  top: 5rem;
+position: absolute;
+  left:60%;
+  top: 15%;
 
-  left: 30rem;
-  z-index: 99;
 }
 
 .hero-text h1 {
@@ -62,7 +66,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: left;
+  background-position: center;
 
   transform-style: preserve-3d;
   /* border: 1px solid #111; */
@@ -70,7 +74,13 @@ body {
 
 /* nav */
 
-.hero .nav ul {
+.nav {
+ position: absolute;
+left: 5%;
+top: 18%;
+}
+
+.nav ul {
   position: relative;
 }
 .hero .nav ul li {
@@ -105,7 +115,7 @@ body {
   position: relative;
   color: #fff;
   text-decoration: none;
-  font-size: var(--step-5);
+  font-size: var(--step-6);
   font-weight: 900;
   line-height: 1em;
   padding-top: 1rem;
