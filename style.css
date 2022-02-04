@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,900,400,500,600,700&display=swap");
 
 :root {
-  --step--2: clamp(0.91rem, 0.9rem + 0.05vw, 0.96rem);
-  --step--1: clamp(1.09rem, 1.07rem + 0.11vw, 1.2rem);
-  --step-0: clamp(1.31rem, 1.28rem + 0.19vw, 1.5rem);
-  --step-1: clamp(1.58rem, 1.52rem + 0.3vw, 1.88rem);
-  --step-2: clamp(1.89rem, 1.8rem + 0.45vw, 2.34rem);
-  --step-3: clamp(2.27rem, 2.14rem + 0.66vw, 2.93rem);
-  --step-4: clamp(2.72rem, 2.53rem + 0.94vw, 3.66rem);
-  --step-5: clamp(3.27rem, 3rem + 1.31vw, 4.58rem);
-  --step-6: clamp(4.27rem, 4rem + 2.31vw, 5.58rem);
- 
+  --step--3: clamp(0.91rem, 0.89rem + 0.10vw, 0.96rem);
+  --step--2: clamp(1rem, 0.94rem + 0.12vw, 1.11rem);
+  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.20rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.50rem);
+  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
+  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
+  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
+  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
+  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
+
 }
 
 *,
@@ -21,21 +21,28 @@ body {
   font-family: "Poppins", sans-serif;
   position: relative;
   background: rgb(82, 81, 81);
+  font-size: var(--step-0);
+  
+}
+body{
+   display: flex;
+   justify-content: center;
+   flex-direction:column ;
 }
 
-
-.hero {
+.section {
   background: rgb(82, 81, 81);
-  max-height: 100vh;
-  width: 100vw;
+  height: 100vh;
+  width:min(95%,100vw);
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
+  margin-inline:auto ;
+
 }
 
-.hero .hero-container {
-
+.section .hero-container {
   display: flex;
   flex-wrap: wrap;
   transform-style: preserve-3d;
@@ -43,19 +50,36 @@ body {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  
+  margin-inline: auto;
 }
 
 .hero-text {
-position: absolute;
-  left:60%;
+  position: absolute;
+  left: 65%;
   top: 15%;
+  width: 600px;
+}
+
+.hero-text .title{
+  display: inline-flex;
+}
+
+.hero-text .title .static-text {
+  font-size: var(--step-0);
+  font-weight: 700;
+ 
+  margin: 0;
 
 }
 
-.hero-text h1 {
-  font-size: var(--step-2);
+.hero-text p{
+  font-size: var(--step--2);
+  text-align: justify;
 }
+.hero-text .title .static-text {
+  margin-right: 10px;
+}
+
 
 .hero-container .block {
   position: relative;
@@ -75,15 +99,15 @@ position: absolute;
 /* nav */
 
 .nav {
- position: absolute;
-left: 5%;
-top: 18%;
+  position: absolute;
+  left: 5%;
+  top: 18%;
 }
 
 .nav ul {
   position: relative;
 }
-.hero .nav ul li {
+.section .nav ul li {
   position: relative;
   list-style: none;
   padding: 0 1rem;
@@ -92,7 +116,7 @@ top: 18%;
   display: table;
 }
 
-.hero .nav ul li:before {
+.section .nav ul li:before {
   content: "";
   position: absolute;
   top: 0;
@@ -105,26 +129,30 @@ top: 18%;
   transform-origin: bottom;
 }
 
-.hero .nav ul li:hover:before {
+.section .nav ul li:hover:before   {
   transition: transform 0.5s ease-in-out;
   transform: scaleY(1);
   transform-origin: top;
 }
 
-.hero .nav ul li a {
+
+
+
+.section .nav ul li a {
   position: relative;
   color: #fff;
   text-decoration: none;
-  font-size: var(--step-6);
+  font-size: var(--step-4);
+
   font-weight: 900;
-  line-height: 1em;
+  line-height: 1;
   padding-top: 1rem;
   display: inline-block;
   text-transform: uppercase;
   transition: 0.5s ease-in-out;
 }
 
-.hero .nav ul li a::before {
+.section .nav ul li a::before {
   content: attr(data-text);
   position: absolute;
   bottom: -100%;
@@ -132,7 +160,33 @@ top: 18%;
   color: #fff;
 }
 
-.hero .nav ul li:hover a {
+.section .nav ul li:hover a {
   transform: translateY(-100%);
   color: #fff;
+}
+
+
+
+
+ .active{
+  background: rgb(52, 53, 51);
+} 
+
+
+/*  */
+span {
+  border-right: .1em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+.skill{
+  background: rgb(43, 43, 44);
 }
