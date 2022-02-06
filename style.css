@@ -185,8 +185,176 @@ span {
   }
 }
 
-
+/* skill section */
 
 .skill{
-  background: rgb(43, 43, 44);
+ width: 100%;
+ height: 100vh;
+position: relative;
+
+background-size: contain;
+background-repeat: no-repeat;
+background-position:right ;
+
+background-image: url('skill-me.png');
+}
+
+
+.skill-container .img img{
+
+  width: 120px;
+  height: 180px;
+  position: absolute;
+
+
+
+background: transparent;
+
+}
+
+.skill .skill-container {
+
+  display: flex;
+ justify-content: space-between;
+ justify-content: center;
+  width: 180px;
+  height: 200px;
+  position: relative;
+  margin-top: 10%;
+  margin-left: 39%;
+/* position: sticky; */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateZ(-10deg);
+  background: transparent;
+  animation: ror 20s linear infinite;
+}
+.skill-container .img{
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+
+}
+@keyframes rotate{
+  from{}
+  to{
+    transform: rotateY(360deg);
+  }
+
+
+}
+@keyframes ror{
+  50%{
+    transform: rotateX(20deg);
+  }
+  80%{
+    transform: rotateX(-20deg);
+  }
+
+}
+
+
+
+.skill-container .img img:nth-child(1)
+{
+  transform:rotateY(60deg) translateZ(300px);
+  
+}
+.skill-container .img img:nth-child(2)
+{
+  transform:rotateY(120deg) translateZ(300px)
+}
+.skill-container .img img:nth-child(3)
+{
+  transform:rotateY(180deg) translateZ(300px)
+}
+.skill-container .img img:nth-child(4)
+{
+  transform:rotateY(240deg) translateZ(300px)
+}
+.skill-container .img img:nth-child(5)
+{
+  transform:rotateY(300deg) translateZ(300px)
+}
+.skill-container .img img:nth-child(6)
+{
+  transform:rotateY(360deg) translateZ(300px)
+}
+
+
+/* work */
+
+.work{
+  width: 100vw;
+  height: 100vh;
+
+display: flex;
+align-items: center;
+}
+
+.work .my-work {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  width: 90%;
+  gap: 1rem;
+}
+.work .my-work img:nth-child(1){
+width: min(90%,600px);
+}
+.work .my-work img:nth-child(2){
+  width: min(90%,200px);
+}
+
+.work .my-work .work-details{
+  width: 500px;
+ 
+}
+
+
+.work .my-work .work-details h1{
+  
+font-size: var(--step-4);
+}
+.work .my-work .work-details p{
+font-size: var(--step--1);
+}
+.work .my-work .work-details button i{
+  background: transparent;
+  font-size: 25px;
+}
+.work .my-work .work-details button a{
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--step--2);
+}
+
+
+
+
+/*  contacts*/
+
+.contacts{
+width: 100vw;
+height: 100vh;
+
+display: flex;
+align-content: center;
+
+}
+.contacts .contacts-container{
+  width: 60%;
+display: flex;
+justify-content: center;
+justify-content: space-between;
+margin-inline:auto ;
+align-items: center;
+
+
+}
+.contacts .contacts-container .form{
+  margin: auto 0;
 }
