@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   position: relative;
-  background: rgb(82, 81, 81);
+
   font-size: var(--step-0);
   
 }
@@ -28,6 +28,7 @@ body{
    display: flex;
    justify-content: center;
    flex-direction:column ;
+   background :gray;
 }
 
 .section {
@@ -358,3 +359,63 @@ align-items: center;
 .contacts .contacts-container .form{
   margin: auto 0;
 }
+
+/* footer */
+
+
+.footer{
+ 
+ width: 100%;
+ margin-inline:auto;
+ color: #fff;
+z-index: 999;
+background: rgb(32, 32, 31);
+padding: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.footer .footer-container .col-sm h4 {
+font-size:var(--step--1)
+}
+
+
+.footer .footer-container .col-sm p{
+  font-size:var(--step--2)
+  }
+
+  .footer .footer-container .col-sm ul li{
+  list-style: none;
+    }
+    .footer .footer-container .col-sm ul li p{
+margin-bottom: 10px;
+        }
+
+
+
+
+        .footer .social{
+       
+          width: 20%;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .fa-facebook{
+          color: #4064AC;
+        }
+
+        .fa-envelope-open{
+color: #BD392B;
+        }
+
+        .fa-twitter{
+color: #329CEA;
+        }
+
+        .fa-mobile-alt{
+color: beige;
+        }
