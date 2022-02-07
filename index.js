@@ -67,7 +67,7 @@ anime({
 
 
   // array with texts to type in typewriter
-  var dataText = [ "Web Designer.", "Computer Technician.", "SmartPhone Tech."];
+  var dataText = [ "Web Designer.", "SmartPhone Tech.","Computer Technician."];
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished
