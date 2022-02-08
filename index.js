@@ -19,7 +19,7 @@ let animation = anime.timeline({
   easing: "easeInOutElastic",
   loop: 1,
  
-  delay: anime.stagger(2, { start: 50 }),
+  delay: anime.stagger(1, { start: 50 }),
 
 });
 
@@ -67,7 +67,7 @@ anime({
 
 
   // array with texts to type in typewriter
-  var dataText = [ "Web Designer.", "SmartPhone Tech.","Computer Technician."];
+  var dataText = [ "SmartPhone Tech.","Computer Technician." ,"Web Designer."];
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished
@@ -106,5 +106,10 @@ anime({
   }
   // start the text animation
   StartTextAnimation(0);
+
+
+
+
+  // nav active
 
 
