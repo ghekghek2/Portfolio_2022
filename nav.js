@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 
     $('.navlink').click(function(){
-      $('.navlink').removeClass('active');
-      $(this).addClass('active');
+  
+      $('.a').addClass('active');
     
     })
     
@@ -12,23 +12,7 @@ $(document).ready(function(){
 
 
 
-    /* ========================================== 
-scrollTop() >= 300
-Should be equal the the height of the header
-========================================== */
 
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= 1100) {
-      $('nav').addClass('fixed-header');
-      $('nav div').addClass('visible-title');
-  }
-  else {
-      $('nav').removeClass('fixed-header');
-      $('nav div').removeClass('visible-title');
-  }
-});
-
-    
     
     
     
