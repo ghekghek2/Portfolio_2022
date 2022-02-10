@@ -19,7 +19,7 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   position: relative;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth ;
   font-size: var(--step-0);
 
 
@@ -44,22 +44,127 @@ section{
   margin-inline: auto;
 }
 
-section .hero-container {
+.section{
+  width: 90%;
   display: flex;
-  flex-wrap: wrap;
-  transform-style: preserve-3d;
-  perspective: 100px;
-  overflow: hidden;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
-  margin-inline: auto;
+  position: relative;
+  
 }
 
-.hero-text {
+.nav{
+flex: 90%;
+z-index: 1;
+}
+.hero-container{
+width: 600px;
+height: 100%;
+ position: absolute;
+left: 0;
+right: 0;
+margin:  0 auto;
+z-index: 0;
+background: url(me.png);
+
+background-size: cover;
+z-index: 99999;
+
+
+}
+
+.hero-container::before{
+  content:"";
   position: absolute;
-  left: 65%;
-  top: 20%;
-  width: 600px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(me.png);
+  background-size: cover;
+  mix-blend-mode: hard-light;
+  opacity: .5;
+}
+
+
+.hero-container::before{
+
+  animation: animates .2s linear infinite,
+  delay-animation 4s ease-in-out infinite;
+
+}
+
+
+
+
+
+@keyframes animates {
+  
+  0%{
+    
+    background-position:0 0;
+    filter: hue-rotate(0deg);
+
+  }
+  10%{
+    background-position: 5px 0 ;
+  }
+  20%{
+    background-position:  -5px 0;
+  }
+  30%{
+    background-position: 6px 0;
+  }
+  40%{
+    background-position: 5px 0;
+  }
+  50%{
+    background-position: -12px 0;
+  }
+  60%{
+    background-position: -4px 0;
+  }
+  70%{
+    background-position: 0 -20px;
+  }
+  80%{
+    background-position: -6px -4px;
+  }
+  81%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 0 0;
+    filter: hue-rotate(360deg);
+    
+  }
+
+
+
+
+}
+
+@keyframes delay-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* .hero-container img{
+  width: 100%;
+  height: 100%;
+} */
+.hero-text{
+  flex: 50%;
 }
 
 .hero-text .title {
@@ -84,28 +189,11 @@ section .hero-container {
   color: #fff;
 }
 
-.hero-container .block {
-  position: relative;
-  width: 30px;
-  height: 30px;
 
-  background: url(me.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-
-  transform-style: preserve-3d;
-  /* border: 1px solid #111; */
-}
 
 /* nav */
 
-.nav {
-  position: absolute;
-  left: 5%;
-  top: 18%;
-}
+
 
 .nav ul {
   position: relative;
@@ -527,7 +615,7 @@ nav {
   color: black;
   }
   nav .container ul li.act {
-  background-color: #3b49df;
+  background-color: #212124;
   border-radius:30px;
   transition: 0.3s;
   }
