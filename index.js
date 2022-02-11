@@ -15,7 +15,7 @@
     // chekc if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-     document.querySelector(".h").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+     document.querySelector(".h").innerHTML = text.substring(0, i+1) +'<span class="typing" aria-hidden="true"></span>';
 
       // wait for a while and call this function again for next character
       setTimeout(function() {
@@ -55,19 +55,28 @@
 
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll("nav .container ul li");
+  const navcon = document.querySelectorAll("navcon");
   window.onscroll = () => {
     var current = "";
   
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
+      if (pageYOffset >= sectionTop - 50) {
         current = section.getAttribute("id"); }
+        
     });
   
     navLi.forEach((li) => {
       li.classList.remove("act");
       if (li.classList.contains(current)) {
         li.classList.add("act");
+        
+        
+
+        
       }
     });
   };
+
+
+
