@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,900,400,500,600,700&display=swap");
 
 @font-face {
-  font-family:VALORANT ;
-  src: url(valorant/Valorant\ Font.ttf)format("truetype");
+  font-family: VALORANT;
+  src: url(valorant/Valorant\ Font.ttf) format("truetype");
 }
 
 :root {
@@ -23,12 +23,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
- 
+
   position: relative;
-  scroll-behavior: smooth ;
+  scroll-behavior: smooth;
   font-size: var(--step-0);
-
-
 }
 
 body {
@@ -36,13 +34,12 @@ body {
   justify-content: center;
   flex-direction: column;
   background: #fff;
-  font-family: valorant!important ;
-
+  font-family: valorant !important ;
 }
 
-section{
+section {
   background: rgb(82, 81, 81);
-  height: min(100vh,1000px);
+  height: min(100vh, 1000px);
   width: min(95%, 1980px);
   overflow: hidden;
   position: relative;
@@ -51,54 +48,53 @@ section{
   margin-inline: auto;
 }
 
-.section{
+.section {
   width: 90%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   position: relative;
-  
 }
 
-.nav{
-flex: 90%;
-z-index: 1;
+.nav {
+  flex: 90%;
+  z-index: 1;
 }
-.hero-container{
-width: 600px;
-height: 100%;
- position: absolute;
-left: 0;
-right: 0;
-margin:  0 auto;
-z-index: 0;
-background: url(me.png);
+.hero-container {
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 0;
+  background: url(me.png);
 
-background-size: cover;
-z-index: 99999;
+  background-size: cover;
+  z-index: 99999;
 
-animation: glitch 3s linear infinite;
-filter: sepia(16%) saturate(85%) contrast(115%);
--webkit-filter: sepia(16%) saturate(85%) contrast(115%);
--moz-filter: sepia(16%) saturate(85%) contrast(115%);
+  animation: glitch 3s linear infinite;
+  filter: sepia(16%) saturate(85%) contrast(115%);
+  -webkit-filter: sepia(16%) saturate(85%) contrast(115%);
+  -moz-filter: sepia(16%) saturate(85%) contrast(115%);
 }
-
 
 @keyframes glitch {
-  2%,64%{
-    transform: translate(1px,0)skew(0deg);
- 
+  2%,
+  64% {
+    transform: translate(1px, 0) skew(0deg);
   }
-  4%,60%{
-    transform: translate(1px,0)skew(0deg);
+  4%,
+  60% {
+    transform: translate(1px, 0) skew(0deg);
   }
-  62%{
-    transform: translate(0,0)skew(1deg);
+  62% {
+    transform: translate(0, 0) skew(1deg);
   }
 }
 
-.hero-container::before{
-  content:"";
+.hero-container::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -107,67 +103,50 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   background: url(me.png);
   background-size: cover;
   mix-blend-mode: hard-light;
-  opacity: .5;
-  
-  
-} 
-
-
-
-.hero-container:hover::before{
- 
-  animation: animates .2s linear infinite,
-  delay-animation 1s ease-in-out infinite;
-
+  opacity: 0.5;
 }
 
-
-
-
-
+.hero-container:hover::before {
+  animation: animates 0.2s linear infinite,
+    delay-animation 1s ease-in-out infinite;
+}
 
 @keyframes animates {
-  
-
-	0%{
+  0% {
     background-position: 0 0;
-    filter:hue-rotate(0deg);
-    }
-    10%{
+    filter: hue-rotate(0deg);
+  }
+  10% {
     background-position: 5px 0;
-    }
-    20%{
+  }
+  20% {
     background-position: -5px 0;
-    }
-    30%{
+  }
+  30% {
     background-position: 15px 0;
-    }
-    40%{
+  }
+  40% {
     background-position: 5px 0;
-    }
-    50%{
+  }
+  50% {
     background-position: -25px 0;
-    }
-    60%{
+  }
+  60% {
     background-position: -15px 0;
-    }
-    70%{
+  }
+  70% {
     background-position: 0 -20px;
-    }
-    80%{
+  }
+  80% {
     background-position: -20px -20px;
-    }
-    81%{
+  }
+  81% {
     background-position: 0 0;
-    }
-    100%{
+  }
+  100% {
     background-position: 0 0;
-    filter:hue-rotate(360deg);
-    }
-
-
-
-
+    filter: hue-rotate(360deg);
+  }
 }
 
 @keyframes delay-animation {
@@ -183,15 +162,14 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   100% {
     opacity: 0;
   }
-} 
+}
 
 /* .hero-container img{
   width: 100%;
   height: 100%;
 } */
-.hero-text{
+.hero-text {
   flex: 50%;
- 
 }
 
 .hero-text .title {
@@ -204,7 +182,6 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   font-weight: 700;
   color: #fff;
   margin: 0;
-  
 }
 .hero-text .title .h {
   margin-bottom: 1rem;
@@ -218,11 +195,7 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   font-family: "Poppins", sans-serif;
 }
 
-
-
 /* nav */
-
-
 
 .nav ul {
   position: relative;
@@ -234,7 +207,6 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   margin: 1rem 0;
   overflow: hidden;
   display: table;
-  
 }
 
 .section .nav ul li:before {
@@ -283,8 +255,6 @@ filter: sepia(16%) saturate(85%) contrast(115%);
   color: #fff;
 }
 
-
-
 .active {
   background: rgb(52, 53, 51);
 }
@@ -303,94 +273,75 @@ filter: sepia(16%) saturate(85%) contrast(115%);
 
 /* skill section */
 
-
-
-
 .skill {
   width: min(100%, 1980px);
-margin: 0;
- 
+  margin: 0;
 
   display: flex;
-justify-content: center;
-padding-right: 0!important;
-align-items: flex-end;
-background: rgb(202, 200, 200);
-justify-content: space-between;
-  
+  justify-content: center;
+  padding-right: 0 !important;
+  align-items: flex-end;
+  background: rgb(202, 200, 200);
+  justify-content: space-between;
 }
 
-
-
-.skill .other-skill{
+.skill .other-skill {
   display: flex;
   flex-direction: column;
-  
+
   height: 100%;
   justify-content: flex-end;
-width: 40%;
-
+  width: 40%;
 }
 
 .skill .other-skill .sc {
   display: flex;
- 
 
- width: 90%;
-
-
-
+  width: 90%;
 }
-.skill .other-skill .sc  div{
+.skill .other-skill .sc div {
   white-space: nowrap;
   animation: askill 60s linear infinite;
   animation-delay: -60s;
 }
 
-.skill .other-skill .sc  div:nth-child(2){
+.skill .other-skill .sc div:nth-child(2) {
   white-space: nowrap;
   animation: askill2 60s linear infinite;
-  animation-delay:-30s ;
+  animation-delay: -30s;
 }
 
-
-.skill .other-skill .sc  div span{
- 
+.skill .other-skill .sc div span {
   font-size: var(--step-5);
 }
 
-
-
 @keyframes askill {
-  0%{
+  0% {
     transform: translateX(100%);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
 
 @keyframes askill2 {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-200%);
   }
 }
 
-
-
 .skill-c {
-  width: 80%;
+  width: 100%;
   position: relative;
-height: 100%;
-  
- background: url(s2.png);
- background-size:cover;
-background-position: center;
- background-repeat: no-repeat;
+  height: 80%;
 
+  background: url(s2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .skill-container .img img {
@@ -410,16 +361,14 @@ background-position: center;
 
   z-index: 999;
 
-  perspective:900px;
+  perspective: 900px;
   transform-style: preserve-3d;
   transform: rotateX(-5deg) rotateZ(-5deg);
   background: transparent;
   animation: ror 20s linear infinite;
-
 }
 
 .skill .skill-img {
-
 }
 
 /* .skill .skill-img img {
@@ -472,8 +421,6 @@ background-position: center;
 /* work */
 
 .work {
- 
-
   display: flex;
   align-items: center;
 }
@@ -518,24 +465,52 @@ background-position: center;
 
 .contacts {
   width: min(100%, 1980px);
-
+  background: #cac8c8;
   display: flex;
   align-content: center;
 }
 .contacts .contacts-container {
-  
   display: flex;
   justify-content: center;
   justify-content: space-between;
   margin-inline: auto;
   align-items: center;
+
+  width: 100%;
 }
+.contacts .contacts-container .socials {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.contacts .contacts-container .socials .bgd {
+  position: absolute;
+  background: url(bg.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.contacts .contacts-container .socials .paper {
+  position: abosulte;
+  background: url(paper.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  mix-blend-mode: lighten;
+  filter: brightness(1.7);
+}
+
 .contacts .contacts-container .form {
   margin: auto 0;
+  width: min(90%, 800px);
+  padding: 1rem;
 }
-
-
-
 
 /* footer */
 
@@ -589,23 +564,19 @@ background-position: center;
   color: beige;
 }
 
-
 /* 
 sticky nav
 
 */
-
-
-
 
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
- 
- width: 100%;
- margin: 0 ; 
+
+  width: 100%;
+  margin: 0;
 }
 
 .sticky {
@@ -628,98 +599,90 @@ sticky nav
   visibility: hidden;
 }
 
-
-nav ul { 
+nav ul {
   list-style-type: none;
   margin: 0 2% auto 0;
   padding-left: 0;
   text-align: right;
   max-width: 100%;
 }
-nav ul li { 
-  display: inline-block; 
+nav ul li {
+  display: inline-block;
   line-height: 60px;
   margin-left: 10px;
 }
 nav ul li a {
-  text-decoration: none; 
+  text-decoration: none;
   color: #a9abae;
 }
 
-
-
 @media only screen and (max-width: 960px) {
-  .content{ 
-      padding: 2rem 0;
+  .content {
+    padding: 2rem 0;
   }
   article {
-      float: none;
-      margin: 0 auto;
-      width: 96%;
+    float: none;
+    margin: 0 auto;
+    width: 96%;
   }
-  article:last-of-type {  
-      margin-bottom: 3rem;
+  article:last-of-type {
+    margin-bottom: 3rem;
   }
-  aside {  
-      float: none;
-      text-align: center;
-      width: 100%;
+  aside {
+    float: none;
+    text-align: center;
+    width: 100%;
   }
 }
 
-
 /* nav active */
-
 
 nav {
   position: sticky;
   top: 0;
   background-color: #c4c3be;
- max-width: 100%;
+  max-width: 100%;
   z-index: 3333;
   width: min(95%, 1980px);
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
-
-  }
-  nav .container {
-    max-width:50%!important;
-
+}
+nav .container {
+  max-width: 50% !important;
 
   padding: 10px;
+}
 
-  }
-
-  nav .container ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    
-  }
-  nav .container ul li {
+nav .container ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+nav .container ul li {
   margin: 0;
 
   padding: 0;
-  border-radius:5px;
-  }
-  nav .container ul li a {
- 
+  border-radius: 5px;
+}
+nav .container ul li a {
   text-decoration: none;
-width: 100%;
+  width: 100%;
   color: black;
   margin: 0;
 
   padding: 0;
-  }
+}
 
-
-  nav .container ul li.act {
+nav .container ul li.act {
   background-color: #212124;
-padding: 0 1rem;
-
-
-  }
-  nav .container ul li.act a {
+  padding: 0 1rem;
+}
+nav .container ul li.act a {
   color: #ffffff;
   transition: 0.3s;
-  }
+}
+
+/* carousel */
+.carousel-item {
+  padding: 3rem 0;
+}
