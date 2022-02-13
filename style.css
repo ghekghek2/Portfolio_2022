@@ -301,14 +301,14 @@ section {
 }
 .skill .other-skill .sc div {
   white-space: nowrap;
-  animation: askill 60s linear infinite;
-  animation-delay: -60s;
+  animation: askill 80s linear infinite;
+  animation-delay: -80s;
 }
 
 .skill .other-skill .sc div:nth-child(2) {
   white-space: nowrap;
-  animation: askill2 60s linear infinite;
-  animation-delay: -30s;
+  animation: askill2 80s linear infinite;
+  animation-delay: -40s;
 }
 
 .skill .other-skill .sc div span {
@@ -368,8 +368,6 @@ section {
   animation: ror 20s linear infinite;
 }
 
-.skill .skill-img {
-}
 
 /* .skill .skill-img img {
   width: 100%;
@@ -510,12 +508,30 @@ section {
   margin: auto 0;
   width: min(90%, 800px);
   padding: 1rem;
+  
+
+}
+.contacts .contacts-container .form  form label, input , .form-text{
+ font-size: var(--step--3);
+}
+
+.contacts .contacts-container .form  form  input:focus  {
+  border-color: #4e4d4d;
+  box-shadow: inset 0 2px 2px rgba(63, 63, 63, 0.075), 0 0 8px rgba(66, 66, 66, 0.6);
+}
+.contacts .contacts-container .form  form  textarea:focus {
+  border-color: #4b4949;
+  box-shadow: inset 0 2px 2px rgba(56, 55, 55, 0.075), 0 0 8px rgba(73, 73, 73, 0.6);
+}
+
+.form-text{
+  font-family: 'Poppins', sans-serif;
 }
 
 /* footer */
 
 .footer {
-  width: 100%;
+  width: min(95%, 1980px);
   margin-inline: auto;
   color: #fff;
   z-index: 999;
@@ -685,4 +701,32 @@ nav .container ul li.act a {
 /* carousel */
 .carousel-item {
   padding: 3rem 0;
+}
+
+
+
+
+.aboutme-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.aboutme-container > div   {
+  flex: 1;
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.aboutme-container div p {
+  font-size: var(--step--3);
+  width: min(500px, 90%);
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
 }
