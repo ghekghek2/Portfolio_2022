@@ -664,7 +664,7 @@ nav {
   font-family: "Poppins", sans-serif;
 }
 nav .container {
-  width: 50% ;
+  width: 80% ;
 
   padding: 10px;
 
@@ -849,31 +849,68 @@ nav .container {
 
 nav .container ul  .icon {
   display: none;
+
 }
 
 @media only screen and (max-width: 776px) {
 
 
-
-  nav .container ul li{
-    display: none;
-  }
-  nav .container ul li.act{
+  .container.responsive li {
+    float: none;
     display: block;
+    text-align: left;
+  }
+
+  nav .container ul li {
+    display: none;
+    width: 50%;
+  }
+
+  nav .container ul li a{
+    width: 100%;
   }
   nav .container ul  .icon{
    
     display: flex;
     align-items: center;
     
+    position: absolute;
+    right: 0;
+    top:25px;
   }
 
+  nav .container ul li.act {
+    display: block;
+
+    text-align: left;
+   
+  }
+  .container.responsive li {
+    float: none;
+    display: block;
+   
+  }
+
+  .btnhover{
+    color: #212124;
+   
+  }
+
+  .btnhover:hover{
+    color: red;
+ 
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+
+  nav .container ul{
+    flex-direction: column;
+  }
+
+
 }
 
-
-
-.myli{
-  display: block;
-}
 
 

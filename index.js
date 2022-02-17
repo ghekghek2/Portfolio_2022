@@ -84,16 +84,18 @@
 
 // hamburger nav
 
-function shownav(x){
 
-
-
-  const matches = document.querySelectorAll(".m");
-
-  for (let i = 0; i < matches.length; i++) 
- matches[i].style.display = "block";
-  
+function myF(press){
  
-
-
-}
+ 
+  var x = document.getElementById("container");
+  
+    if (x.className === "container") {
+      x.className += " responsive";
+    } else {
+      x.className = "container";
+    }
+    
+    press.classList.toggle("fa-times-circle")
+  
+  }
