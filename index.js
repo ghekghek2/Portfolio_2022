@@ -15,7 +15,7 @@
     // chekc if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-     document.querySelector(".h").innerHTML = text.substring(0, i+1) +'<span class="typing" aria-hidden="true"></span>';
+     document.querySelector(".h").innerHTML = text.substring(0, i + 1) +'<span class="typing" aria-hidden="true"></span>';
 
       // wait for a while and call this function again for next character
       setTimeout(function() {
@@ -82,3 +82,18 @@
 
 
 
+// hamburger nav
+
+function shownav(x){
+
+
+
+  const matches = document.querySelectorAll(".m");
+
+  for (let i = 0; i < matches.length; i++) 
+ matches[i].style.display = "block";
+  
+ 
+
+
+}
