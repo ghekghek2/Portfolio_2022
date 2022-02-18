@@ -54,7 +54,7 @@
 
 
   const sections = document.querySelectorAll("section");
-  const navLi = document.querySelectorAll("nav .container ul li");
+  const navLi = document.querySelectorAll("nav .nav-container ul li");
   const navcon = document.querySelectorAll("navcon");
   window.onscroll = () => {
     var current = "";
@@ -90,10 +90,10 @@ function myF(press){
  
   var x = document.getElementById("container");
   
-    if (x.className === "container") {
+    if (x.className === "nav-container") {
       x.className += " responsive";
     } else {
-      x.className = "container";
+      x.className = "nav-container";
     }
     
     press.classList.toggle("fa-times-circle")
