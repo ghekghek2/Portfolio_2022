@@ -123,7 +123,7 @@ const Cards = ((() => {
     {
       let cards = document.querySelector(".cards");
       cards.addEventListener('click', clicked, false);
-      document.querySelectorAll(".cards .card")[1].click();
+      document.querySelectorAll(".cards .card")[0].click();
     }
   }
 
