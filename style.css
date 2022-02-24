@@ -1171,8 +1171,8 @@ nav .nav-container ul .icon {
   }
   .crop{
     margin-top: 2rem;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 
 }
@@ -1204,6 +1204,10 @@ margin: 0 auto;
     margin: 0;
     margin-bottom: 5px;
  
+  }
+  .crop{
+    
+   display: none;
   }
   
 }
