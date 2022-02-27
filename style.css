@@ -675,11 +675,16 @@ nav {
 
 .contacts .contacts-container .socials .bgd {
   position: absolute;
-  background: url(images/bg.jpg);
+  background: url(images/con-image.png);
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: center ;
+  background-color: #525151;
+
+  
+  
+ 
 }
 .contacts .contacts-container .socials .paper {
   position: abosulte;
@@ -688,7 +693,6 @@ nav {
   width: 100%;
   background-size: cover;
   background-position: center;
-
   mix-blend-mode: lighten;
   filter: brightness(1.7);
 }
@@ -739,6 +743,49 @@ font-size: var(--step--2);
   font-family: "Poppins", sans-serif;
 }
 
+
+/* aboutme */
+
+.aboutme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.aboutme-container > div {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutme-container div p {
+  font-size: var(--step--3);
+  width: min(500px, 90%);
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  color: #000000;
+  
+}
+.aboutme-container div p span:nth-child(1){
+  color: rgb(216, 211, 208);
+}
+.aboutme-container div p span:nth-child(2){
+  color: rgb(215, 243, 169);
+}
+.aboutme-container .aboutme-img{
+  background: url(images/aboutme-img.png);
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
 
 
@@ -910,27 +957,8 @@ nav .nav-container ul li.act a {
   padding: 3rem 0;
 }
 
-.aboutme-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
 
-.aboutme-container > div {
-  flex: 1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.aboutme-container div p {
-  font-size: var(--step--3);
-  width: min(500px, 90%);
-  font-family: "Poppins", sans-serif;
-  text-align: justify;
-}
+/* about me */
 
 .crop {
   display: none;
@@ -945,6 +973,7 @@ nav .nav-container ul li.act a {
     margin-left: auto;
     z-index: 1;
     margin-right: 0;
+  
   }
   .nav {
     display: none;
@@ -954,8 +983,8 @@ nav .nav-container ul li.act a {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    margin-right: auto;
+  
     
   }
   .snav {
@@ -968,35 +997,17 @@ nav .nav-container ul li.act a {
     left: 0;
     right: 0;
     margin: 0 auto;
+    width: min(95%, 1980px);
   }
 
   nav .nav-container {
     width: 80%;
     margin: 0 auto;
   }
-  .hero-text{
-    flex: 50%;
-  }
+  
 }
 
-@media only screen and (max-width: 1300px) {
-  #home {
-    width: 95%;
-  }
 
-  .hero-container {
-    width: 50%;
-  }
-
-  .hero-text p {
-    width: 50%;
-  }
-
-  .h {
-    width: 50%;
-  }
-
-}
 
 @media only screen and (max-width: 1473px) {
   .hero-container {
@@ -1025,19 +1036,59 @@ nav .nav-container ul li.act a {
     width: 100%;
   }
   nav .nav-container {
-    width: 100%;
+ width: 100%;
   }
   .skill-c {
     background: none;
   }
   nav {
     opacity: 1;
+   
   }
+
 }
+
+
 
 nav .nav-container ul .icon {
   display: none;
 }
+
+@media only screen and (max-width: 1300px) {
+  #home {
+    width: 95%;
+  }
+
+  .hero-container {
+    width: 50%;
+  }
+
+  .hero-text p {
+    width: 100%;
+  }
+
+  .h {
+    width: 100%;
+  }
+  #home-sec .section {
+    flex-direction: column-reverse;
+    height: calc(100vh - 175px);
+    margin-top: 5rem;
+   
+  }
+  .crop{
+    width: 300px;
+    height:300px;
+  }
+  .hero-text{
+    margin-inline: auto;
+  }
+
+}
+
+
+
+
 
 @media only screen and (max-width: 776px) {
  
@@ -1166,13 +1217,11 @@ nav .nav-container ul .icon {
     opacity: 1;
   }
 
-  .hero-text {
-    width: 90%;
-  }
+
   .crop{
     margin-top: 2rem;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
 }
@@ -1205,9 +1254,14 @@ margin: 0 auto;
     margin-bottom: 5px;
  
   }
+
   .crop{
-    
-   display: none;
+    width: 200px;
+    height: 200px;
+  }
+  .hero-text{
+    width: 90%;
+    margin-inline: auto;
   }
   
 }
