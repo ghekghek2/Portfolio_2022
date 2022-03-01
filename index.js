@@ -7,7 +7,7 @@
 
 
   // array with texts to type in typewriter
-  var dataText = ["SmartPhone Tech.","Computer Technician.","Web Designer."];
+  var dataText = ["SmartPhone Tech.","Computer Tech.","UI/UX Designer."];
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished
