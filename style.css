@@ -191,7 +191,7 @@ section {
 
 .hero-text p {
   font-size: var(--step--2);
-  text-align: justify;
+
   color: rgb(151, 150, 150);
   font-family: "Poppins", sans-serif;
 
@@ -327,7 +327,7 @@ font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   padding-right: 0 !important;
-  align-items: flex-end;
+ 
   background: rgb(202, 200, 200);
   justify-content: space-between;
 }
@@ -365,7 +365,7 @@ nav {
 
   height: 100%;
   justify-content: flex-end;
-  width: 40%;
+  width: 20%;
 }
 
 .skill .other-skill h1{
@@ -420,13 +420,15 @@ letter-spacing: 2px;
 
 .skill-c {
   width: 100%;
+max-width: 70%;
   position: relative;
   height: 90%;
 
   background: url(images/s2.png);
   background-size: cover;
-  background-position: center;
+  background-position: center ;
   background-repeat: no-repeat;
+ margin-top: auto;
 }
 
 .skill-container .img img {
@@ -472,14 +474,14 @@ letter-spacing: 2px;
     transform: rotateY(360deg);
   }
 }
-@keyframes ror {
+/* @keyframes ror {
   50% {
-    transform: rotateX(5deg);
+    transform: rotateX(-5deg);
   }
   80% {
     transform: rotateX(-5deg);
   }
-}
+} */
 
 .skill-container .img img:nth-child(1) {
   transform: rotateY(45deg) translateZ(300px);
@@ -504,6 +506,7 @@ letter-spacing: 2px;
 }
 .skill-container .img img:nth-child(8) {
   transform: rotateY(360deg) translateZ(300px);
+  height: 100px;
 }
 
 /* work */
@@ -619,10 +622,18 @@ color: #fff;
   .card-container .card {
     max-width: 400px;
   }
+
   }
 
   @media  (max-width:768px){
   
+    .other-skill{
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+    
+
     .card-container .card{
     
       max-width: 300px;
@@ -1137,11 +1148,14 @@ nav .nav-container ul li.act a {
   nav .nav-container {
     width: 100%;
   }
-  .skill-c {
-    background: none;
-  }
+
   nav {
     opacity: 1;
+  }
+
+
+  .skill{
+    justify-content: flex-end;
   }
 }
 
@@ -1149,17 +1163,45 @@ nav .nav-container ul .icon {
   display: none;
 }
 
+
+@media only screen and (max-width: 1170px) {
+  .skill-c {
+   
+    width: 100%;
+ background-size: 90%;
+ background-position: bottom 0 right 0;
+ 
+  }
+  .skill .other-skill{
+    width: 0;
+  }
+
+  .skill .skill-container{
+    top: 33%;
+    left: 18%;
+    perspective: 20000px;  }
+
+  .skill-container .img img{
+    width: 100px;
+    height: 130px;
+  }
+
+  .skill-container .img {
+    width: 80%;
+  }
+}
+
+
+
+
+
 @media only screen and (max-width: 1300px) {
   #home {
-    width: 95%;
+    width: 100%;
   }
 
   .hero-container {
     width: 50%;
-  }
-
-  .hero-text p {
-    width: 100%;
   }
 
   .h {
@@ -1167,21 +1209,33 @@ nav .nav-container ul .icon {
   }
   #home-sec .section {
     flex-direction: column-reverse;
-    height: calc(100vh - 175px);
-    margin-top: 5rem;
+  height: auto;
+ 
   }
   .crop {
+    top: 100px;
     width: 300px;
     height: 300px;
   }
   .hero-text {
     margin-inline: auto;
   }
+  .btns{
+    justify-content: center;
+  }
 }
 
 
 
 @media  (max-width: 768px) {
+
+section{
+  height: auto;
+  padding: 2em 0;
+}
+.btns{
+  justify-content: center;
+}
 
   .card__detail .work-img {
     width: 100px;
@@ -1192,11 +1246,9 @@ nav .nav-container ul .icon {
     height: 100px;
   }
   .displayNav {
-    width: 100%;
+    width: 95%;
   }
-  section {
-    width: 100%;
-  }
+
   #container {
     padding: 0;
   }
@@ -1248,7 +1300,7 @@ nav .nav-container ul .icon {
     flex-direction: column;
   }
   nav {
-    width: 100%;
+    width: 95%;
   }
   .nav-container {
     width: 100%;
@@ -1262,12 +1314,16 @@ nav .nav-container ul .icon {
     font-size: var(--step-0);
   }
 
-  .skill-c {
+  /* .skill-c {
     display: none;
-  }
+  } */
 
   .mobile-skill {
-    display: block;
+    display: flex;
+    flex-direction: column;
+   
+   
+    padding: 1rem 0;
   }
   .skill {
     justify-content: center;
@@ -1276,7 +1332,8 @@ nav .nav-container ul .icon {
   .skill .other-skill {
     justify-content: flex-start;
     width: 90%;
-    height: 90%;
+    height: auto;
+  
   }
   .skill .other-skill .sc {
     display: none;
@@ -1291,22 +1348,28 @@ nav .nav-container ul .icon {
     display: flex;
     align-items: center;
   }
-  #home-sec .section {
+  .section {
     flex-direction: column-reverse;
     /* height: calc(100vh - 170px); */
-    height: 100%;
-    margin-top: 3rem;
+    
+    padding: 1rem;
+  gap: 3em;
+
   }
+
+
   .crop {
     width: 300px;
     height: 300px;
+    position: relative;
+
   }
   .snav {
     opacity: 1;
   }
 
   .crop {
-    margin-top: 2rem;
+top: 50px;
     width: 300px;
     height: 300px;
   }
@@ -1333,12 +1396,13 @@ nav .nav-container ul .icon {
   .crop {
     width: 200px;
     height: 200px;
+    top: 5px;
     
   }
   .hero-text {
     width: 100%;
     margin-inline: auto;
-    height: 50%;
+padding-top: 1rem;
     align-items: center;
     justify-content: center;
   }
@@ -1390,7 +1454,7 @@ nav .nav-container ul li{
 }
 
 .footer{
-  width: 100%;
+  width: 95%;
 }
 .footer .footer-container a{
   font-size:14px ;
@@ -1399,8 +1463,100 @@ nav .nav-container ul li{
 
 }
 
-@media  (max-width:768px){
+@media  (max-width:500px){
+
   section{
     height: auto;
+  padding: 0;
   }
+ 
+  .hero-text .btns div{
+    width: 150px;
+  }
+  .hero-text div {
+   
+
+   width: 100%;
+  }
+
+ 
+
+  .hero-text > div{
+    margin-bottom:5px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #home-sec .section{
+    justify-content: center;
+
+  }
+  .hero-text{
+    justify-content: center;
+    padding: 0;
+  }
+  .crop{
+    top: 50px;
+  }
+
+.skill-c{
+ max-width: 500px;
+ width: 100%;
+  background-position:  bottom 0 right -50px;
+  background-size: 110%;
+ 
+  height: 450px;
+
+}
+.skill .other-skill{
+  display: none;
+}  
+
+.skill .skill-container {
+  top: 45%;
+  left: 18%;
+  perspective: 20000px;
+ width: 80px;
+ 
+}
+
+
+
+
+.skill-container .img img{
+  width: 50px ;
+  height: 85px;
+}
+
+
+  
+
+
+.skill-container .img img:nth-child(1) {
+  transform: rotateY(45deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(2) {
+  transform: rotateY(90deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(3) {
+  transform: rotateY(145deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(4) {
+  transform: rotateY(180deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(5) {
+  transform: rotateY(225deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(6) {
+  transform: rotateY(270deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(7) {
+  transform: rotateY(315deg) translateZ(80px);
+}
+.skill-container .img img:nth-child(8) {
+  transform: rotateY(360deg) translateZ(80px);
+ 
+  
+}
+
 }
